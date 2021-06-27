@@ -34,7 +34,7 @@ fun MainScreen(price: Price) {
                 style = TextStyle(fontSize = 25.sp)
             )
 
-            val animationSpec = remember { LottieAnimationSpec.RawRes(price.lottieAnim) }
+            val animationSpec = LottieAnimationSpec.RawRes(price.lottieAnim)
             val animationState = rememberLottieAnimationState(
                 autoPlay = true,
                 repeatCount = Integer.MAX_VALUE

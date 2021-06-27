@@ -6,8 +6,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
 import es.enylrad.luzhora.ui.LuzhoraTheme
-import es.enylrad.luzhora.notification.launchNotificationPrice
-import es.enylrad.luzhora.util.programAlarm
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,13 +19,21 @@ class MainActivity : AppCompatActivity() {
                 MainActivityScreen(mainViewModel)
             }
         }
+        mainViewModel.startService(this)
+    }
 
-        launchNotificationPrice()
-        programAlarm()
+    override fun onResume() {
+        super.onResume()
+        mainViewModel.startProcessCheckPrice()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mainViewModel.pauseProcessCheckPrice()
     }
 }
 
 @Composable
 private fun MainActivityScreen(mainViewModel: MainViewModel) {
-    MainScreen(mainViewModel.currentPrice)
+    MainScreen(mainViewModel.currentPrice.value)
 }

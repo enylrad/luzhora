@@ -29,8 +29,7 @@ class MainViewModel : ViewModel() {
             update = true
             while (update) {
                 delay(TimeUnit.SECONDS.toMillis(1))
-                val price = getPrice()
-                currentPrice.value = price
+                currentPrice.value = getPrice()
             }
         }
     }

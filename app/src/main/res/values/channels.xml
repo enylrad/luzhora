@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="channel_id">prices_type</string>
+    <string name="channel_title">Tipo de tarifa</string>
+    <string name="channel_description">Tipos de tarifa eléctrica</string>
+</resources>

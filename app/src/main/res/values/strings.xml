@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Luzhora</string>
+    <string name="high">Tarifa: Punta</string>
+    <string name="medium">Tarifa: Llana</string>
+    <string name="low">Tarifa: Valle</string>
+
+    <string name="service_name">Servicio de tarifa eléctrica</string>
+    <string name="service_price">Servicio que se encarga de actualizar el estado de la tarifa eléctrica</string>
+</resources>

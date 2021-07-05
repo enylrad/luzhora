@@ -1,4 +1,4 @@
-package es.enylrad.luzhora.ui
+package es.enylrad.luzhora.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

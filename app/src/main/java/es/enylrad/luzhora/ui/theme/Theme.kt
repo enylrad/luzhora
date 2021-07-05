@@ -1,4 +1,4 @@
-package es.enylrad.luzhora.ui
+package es.enylrad.luzhora.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

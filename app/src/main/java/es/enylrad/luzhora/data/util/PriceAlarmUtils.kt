@@ -1,12 +1,11 @@
-package es.enylrad.luzhora.util
+package es.enylrad.luzhora.data.util
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.util.Log.d
 import androidx.appcompat.app.AppCompatActivity
-import es.enylrad.luzhora.receiver.PriceBroadcastReceiver
+import es.enylrad.luzhora.common.receiver.PriceBroadcastReceiver
 import java.util.*
 
 

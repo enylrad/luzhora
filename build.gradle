@@ -2,7 +2,7 @@
 buildscript {
     ext {
         compose_version = '1.0.0-beta09'
-        activity_compose_version = '1.3.0-beta02'
+        activity_compose_version = '1.3.0-rc01'
         viewmodel_compose_version = '1.0.0-alpha07'
         lottie_version = "1.0.0-beta07-1"
     }
@@ -13,7 +13,7 @@ buildscript {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0-beta04'
+        classpath 'com.android.tools.build:gradle:7.0.0-beta05'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong

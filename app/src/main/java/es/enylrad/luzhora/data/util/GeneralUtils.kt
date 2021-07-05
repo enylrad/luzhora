@@ -1,8 +1,6 @@
-package es.enylrad.luzhora.util
+package es.enylrad.luzhora.data.util
 
 import android.os.Build
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 fun supportsOreo(code: () -> Unit) {

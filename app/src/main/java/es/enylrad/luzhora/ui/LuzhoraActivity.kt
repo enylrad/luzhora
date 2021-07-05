@@ -1,39 +1,43 @@
-package es.enylrad.luzhora.main
+package es.enylrad.luzhora.ui
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
-import es.enylrad.luzhora.ui.LuzhoraTheme
+import es.enylrad.luzhora.ui.theme.LuzhoraTheme
 
 
 class MainActivity : AppCompatActivity() {
 
-    val mainViewModel by viewModels<MainViewModel>()
+    val luzhoraViewModel by viewModels<LuzhoraViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initApp()
+    }
+
+    private fun initApp(){
         setContent {
             LuzhoraTheme {
-                MainActivityScreen(mainViewModel)
+                LuzhoraApp(luzhoraViewModel)
             }
         }
-        mainViewModel.startService(this)
     }
 
     override fun onResume() {
         super.onResume()
-        mainViewModel.startProcessCheckPrice()
+        luzhoraViewModel.startProcessCheckPrice()
     }
 
     override fun onPause() {
         super.onPause()
-        mainViewModel.pauseProcessCheckPrice()
+        luzhoraViewModel.pauseProcessCheckPrice()
     }
 }
 
 @Composable
-private fun MainActivityScreen(mainViewModel: MainViewModel) {
-    MainScreen(mainViewModel.currentPrice.value)
+private fun LuzhoraApp(luzhoraViewModel: LuzhoraViewModel) {
+    val price = luzhoraViewModel.currentPrice.value
+    MainBody(price)
 }

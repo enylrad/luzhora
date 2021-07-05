@@ -1,6 +1,6 @@
-package es.enylrad.luzhora.util
+package es.enylrad.luzhora.data.util
 
-import es.enylrad.luzhora.main.Price
+import es.enylrad.luzhora.data.model.Price
 import java.util.*
 
 fun getPrice(): Price {

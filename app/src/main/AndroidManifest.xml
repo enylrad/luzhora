@@ -3,10 +3,12 @@
     package="es.enylrad.luzhora">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
-        android:allowBackup="true"
+        android:name=".LuzhoraApp"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -14,12 +16,19 @@
         android:theme="@style/Theme.Luzhora">
 
         <receiver
-            android:name=".receiver.PriceBroadcastReceiver"
+            android:name=".common.receiver.PriceBroadcastReceiver"
             android:description="@string/service_price"
-            android:label="@string/service_name" />
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/service_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <activity
-            android:name=".main.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Luzhora.NoActionBar">

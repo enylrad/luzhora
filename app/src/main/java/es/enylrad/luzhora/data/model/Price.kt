@@ -1,4 +1,4 @@
-package es.enylrad.luzhora.main
+package es.enylrad.luzhora.data.model
 
 import androidx.annotation.ColorRes
 import androidx.annotation.RawRes

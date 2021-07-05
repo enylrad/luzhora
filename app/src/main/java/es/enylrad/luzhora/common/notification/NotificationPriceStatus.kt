@@ -1,4 +1,4 @@
-package es.enylrad.luzhora.notification
+package es.enylrad.luzhora.common.notification
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -6,9 +6,9 @@ import android.app.NotificationManager
 import android.content.Context
 import androidx.core.app.NotificationCompat
 import es.enylrad.luzhora.R
-import es.enylrad.luzhora.main.Price
-import es.enylrad.luzhora.util.getPrice
-import es.enylrad.luzhora.util.supportsOreo
+import es.enylrad.luzhora.data.model.Price
+import es.enylrad.luzhora.data.util.getPrice
+import es.enylrad.luzhora.data.util.supportsOreo
 
 const val ID_NOTIFICATION_PRICE = 1
 

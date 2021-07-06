@@ -5,6 +5,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
+import es.enylrad.luzhora.ui.screen.MainBody
 import es.enylrad.luzhora.ui.theme.LuzhoraTheme
 
 

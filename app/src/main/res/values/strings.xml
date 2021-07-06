@@ -6,4 +6,5 @@
 
     <string name="service_name">Servicio de tarifa eléctrica</string>
     <string name="service_price">Servicio que se encarga de actualizar el estado de la tarifa eléctrica</string>
+    <string name="animated_by_s">Animación hecha por %s</string>
 </resources>

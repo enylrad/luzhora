@@ -1,4 +1,4 @@
-package es.enylrad.luzhora.ui
+package es.enylrad.luzhora.ui.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Scaffold
@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieAnimationSpec
 import com.airbnb.lottie.compose.rememberLottieAnimationState
+import es.enylrad.luzhora.R
 import es.enylrad.luzhora.data.model.Price
 import es.enylrad.luzhora.ui.theme.LuzhoraTheme
 
@@ -45,7 +46,7 @@ fun MainBody(price: Price) {
                 animationState = animationState
             )
             Text(
-                text = "Animation by Waleed Hashmi",
+                text = stringResource(id = R.string.animated_by_s, "Waalled Hasmi"),
                 style = TextStyle(fontSize = 12.sp, fontStyle = FontStyle.Italic)
             )
         }
